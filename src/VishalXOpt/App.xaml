@@ -1,0 +1,70 @@
+<Application x:Class="VishalXOpt.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="clr-namespace:VishalXOpt.ViewModels"
+             xmlns:views="clr-namespace:VishalXOpt.Views">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Themes/DarkTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <!-- Top-level sections -->
+            <DataTemplate DataType="{x:Type vm:HomeViewModel}">
+                <views:HomeView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:OptimizationShellViewModel}">
+                <views:OptimizationShellView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:ToolsViewModel}">
+                <views:ToolsView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:SettingsViewModel}">
+                <views:SettingsView/>
+            </DataTemplate>
+
+            <!-- Optimization sub-tabs -->
+            <DataTemplate DataType="{x:Type vm:TweakTabViewModel}">
+                <views:TweakTabView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:ListTabViewModelBase}">
+                <views:ListTabView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:CleanupViewModel}">
+                <views:CleanupView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:PowerManagementViewModel}">
+                <views:PowerManagementView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:WinUtilViewModel}">
+                <views:WinUtilView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:DevicesInterruptsViewModel}">
+                <views:DevicesInterruptsView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:NetworkAdaptersViewModel}">
+                <views:NetworkAdaptersView/>
+            </DataTemplate>
+
+            <!-- Tools drill-down screens -->
+            <DataTemplate DataType="{x:Type vm:StoreXViewModel}">
+                <views:StoreXView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:GameModeXViewModel}">
+                <views:GameModeXView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:ProcessXViewModel}">
+                <views:ProcessXView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:LatencyTestViewModel}">
+                <views:LatencyTestView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:GameReadyXViewModel}">
+                <views:GameReadyXView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:SteamViewModel}">
+                <views:SteamView/>
+            </DataTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
