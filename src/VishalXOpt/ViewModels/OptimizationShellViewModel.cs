@@ -52,7 +52,7 @@ public sealed class OptimizationShellViewModel : ViewModelBase
     /// field on the DataContext instance, only instance members.</summary>
     public IReadOnlyList<OptimizationTabInfo> Tabs => AllTabs;
 
-    private OptimizationTabInfo _selectedTab = Tabs[0];
+    private OptimizationTabInfo _selectedTab = AllTabs[0];
     public OptimizationTabInfo SelectedTab
     {
         get => _selectedTab;
